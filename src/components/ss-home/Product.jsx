@@ -1,6 +1,10 @@
 import React from "react";
-import { ProductContent } from "./Content";
+import content from "./Content";
 import { img } from "../Script";
+
+//variable
+const sectionTitle = content.en_EN.product.sectionTitle;
+const productContent = content.en_EN.product.productContent;
 
 function ProductCard(props) {
   return (
@@ -9,7 +13,9 @@ function ProductCard(props) {
       <h3>{props.title}</h3>
       <div className="pc-subtitle">{props.subtitle}</div>
       <div className="pc-desc">{props.desc}</div>
-      <button>Pelajari</button>
+      <a className="btn-learn" href={props.url}>
+        Pelajari
+      </a>
     </div>
   );
 }
@@ -17,9 +23,9 @@ function ProductCard(props) {
 function Product() {
   return (
     <section id="product">
-      <h2>PRODUK KAMI</h2>
+      <h2>{sectionTitle.toUpperCase()}</h2>
       <div className="product-container">
-        {ProductContent.map((content) => (
+        {productContent.map((content) => (
           <ProductCard
             key={content.id}
             title={content.title}
@@ -27,8 +33,11 @@ function Product() {
             desc={content.desc}
             logo={content.logo}
             alt={content.alt}
+            url={content.url}
           />
         ))}
+        <div className="empty-product"></div>
+        <div className="empty-product"></div>
       </div>
     </section>
   );

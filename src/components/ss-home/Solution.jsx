@@ -1,6 +1,10 @@
 import React from "react";
-import { SolutionContent } from "./Content";
+import content from "./Content";
 import { img } from "../Script";
+
+//variable
+const sectionTitle = content.en_EN.solution.sectionTitle;
+const solutionContent = content.en_EN.solution.solutionContent;
 
 function SolutionCard(props) {
   return (
@@ -16,9 +20,9 @@ function SolutionCard(props) {
 function Solution() {
   return (
     <section id="solution">
-      <h2>SOLUSI TEKNOLOGI UNTUK BISNIS ANDA</h2>
+      <h2>{sectionTitle.toUpperCase()}</h2>
       <div className="solution-container">
-        {SolutionContent.map((content) => (
+        {solutionContent.map((content) => (
           <SolutionCard
             key={content.id}
             title={content.title}

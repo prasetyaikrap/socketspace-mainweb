@@ -1,19 +1,25 @@
 import React from "react";
 
 //Components
-import Navbar from "./Navbar";
+import { NavHome } from "./Navbar";
 import Solution from "./Solution";
 import Product from "./Product";
+import Teams from "./Teams";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 function Home() {
   return (
     <div>
-      <Navbar />
+      <NavHome />
       <Solution />
+      <hr className="hr-home" />
       <Product />
-      {/* <Project />
+      <hr className="hr-home" />
       <Teams />
-      <Contact /> */}
+      <hr className="hr-home" />
+      <Contact />
+      <Footer />
     </div>
   );
 }
