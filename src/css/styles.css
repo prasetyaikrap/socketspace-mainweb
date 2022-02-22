@@ -234,6 +234,7 @@ section h2 {
   justify-content: center;
   flex-direction: column;
   width: 220px;
+  height: 280px;
   align-items: center;
   margin: 10px 10px;
   border-radius: 5px;
@@ -244,6 +245,7 @@ section h2 {
 .empty-teams {
   padding-top: 0;
   padding-bottom: 0;
+  height: 0;
   visibility: hidden;
 }
 .teams-card:hover {
@@ -251,7 +253,7 @@ section h2 {
   transition: all 0.5s;
 }
 .teams-card img {
-  width: 90px;
+  width: 95px;
   height: auto;
   margin: 7px auto;
 }

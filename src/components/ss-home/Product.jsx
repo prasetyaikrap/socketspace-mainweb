@@ -5,6 +5,7 @@ import { img } from "../Script";
 //variable
 const sectionTitle = content.en_EN.product.sectionTitle;
 const productContent = content.en_EN.product.productContent;
+const learnbutton = content.en_EN.product.learn;
 
 function ProductCard(props) {
   return (
@@ -14,7 +15,7 @@ function ProductCard(props) {
       <div className="pc-subtitle">{props.subtitle}</div>
       <div className="pc-desc">{props.desc}</div>
       <a className="btn-learn" href={props.url}>
-        Pelajari
+        {props.learnbtn}
       </a>
     </div>
   );
@@ -34,6 +35,7 @@ function Product() {
             logo={content.logo}
             alt={content.alt}
             url={content.url}
+            learnbtn={learnbutton}
           />
         ))}
         <div className="empty-product"></div>
